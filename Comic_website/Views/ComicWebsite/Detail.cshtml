@@ -1,5 +1,9 @@
 ﻿@{
     Layout = null;
+    var newsTitle = "Court Wordicts on Mushaeaf";
+    var issueDate = "19 December 2019";
+    var descryption = "<p>Court wordect</p>";
+    var reporter = "hk";
 }
 
 <!DOCTYPE html>
@@ -11,7 +15,12 @@
 </head>
 <body>
     <div>
-        <h1> hello from view</h1>
+        <h1>@newsTitle</h1>
+        <div>Date #@issueDate</div>
+        <h2>Descryption</h2>
+        <div>@Html.Raw(descryption)</div>
+        <h3>Reporter</h3>
+        <div>@reporter</div>
     </div>
 </body>
 </html>
