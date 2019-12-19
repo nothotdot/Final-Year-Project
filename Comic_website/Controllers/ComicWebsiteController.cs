@@ -10,12 +10,8 @@ namespace Comic_website.Controllers
     {
         public ActionResult Detail()
         {
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Thursday)
-            {
-                return Redirect("/");
-            }
-            return Content("Hello from the comic website controller");
-            
+            return View(); 
+        }
             }
         }
-    }
+    
