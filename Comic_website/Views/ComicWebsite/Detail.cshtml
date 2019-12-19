@@ -3,7 +3,14 @@
     var newsTitle = "Court Wordicts on Mushaeaf";
     var issueDate = "19 December 2019";
     var descryption = "<p>Court wordect</p>";
-    var reporter = "hk";
+    var newsInfo = new string[]
+{
+    "Reporter : Hamza",
+    "Source : CNN",
+    "Other : Fox"
+};
+
+
 }
 
 <!DOCTYPE html>
@@ -19,8 +26,18 @@
         <div>Date #@issueDate</div>
         <h2>Descryption</h2>
         <div>@Html.Raw(descryption)</div>
-        <h3>Reporter</h3>
-        <div>@reporter</div>
+        @if (newsInfo.Length >0)
+        {
+        <h3>Info</h3>
+        <div>
+            @foreach (var item in newsInfo)
+            {
+                <ul>
+                    <li> <text> * @item </text> </li>
+                </ul>
+            }
+        </div>
+        }
     </div>
 </body>
 </html>
